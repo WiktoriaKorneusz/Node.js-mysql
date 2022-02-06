@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ReadIt</title>
+        <link rel="icon" href="img/logo.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/main.js"></script>
+    </head>
+    <body class="blue-grey darken-4 blue-grey-text text-lighten-5">
+        <header class="">
+            <nav class="cyan">
+                <div class="nav-wrapper container">
+                    <a href="/" class="brand-logo left ">
+                        Read<span>It</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        data-target="mobilenav"
+                        class="sidenav-trigger right"
+                    >
+                        <i class="material-icons large">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/">All Reviews</a></li>
+                        <li><a href="/new-review">Add review</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul id="mobilenav" class="sidenav">
+                <li><a href="/">All Reviews</a></li>
+                <li><a href="/new-review">Add review</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="parallax-container primary-parallax">
+                <div class="parallax">
+                    <img src="img/about.png" />
+                </div>
+                <hgroup class="caption center-align container">
+                    <h1 class="center">
+                        Read<span class="cyan-text">It</span>
+                    </h1>
+                    <h2 class="center light">
+                        Find your next favorite book today!
+                    </h2>
+                </hgroup>
+            </div>
+            <section class="container content">
+                <h3>About Read<span class="cyan-text">It</span></h3>
+                <p>
+                    Readit is a place for every bookworm. Everyone can share,
+                    edit and delete reviews. You can start reviewing right now
+                    for free!
+                </p>
+                <p>
+                    This project was made thanks to
+                    <a
+                        href="https://materializecss.com/"
+                        class="bold cyan-text"
+                        >Materializecss</a
+                    >
+                    and <a href="https://openlibrary.org/" class="bold cyan-text">Open Library API</a>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

@@ -87,7 +87,7 @@ section.container {
 
     grid-template-areas: "image" "content" "action";
     justify-items: center;
-    
+
     gap: 1em;
     @include desktop {
         grid-template-columns: 200px repeat(2, 1fr);
@@ -215,18 +215,22 @@ textarea {
     }
 }
 
-.status-page-container{
+.status-page-container {
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    h2{
+    h2 {
         font-size: 2.5rem;
         margin-top: 0;
     }
-    p{
+    p {
         font-size: 1.5rem;
         margin-top: 0;
     }
+}
+.book-action {
+    display: flex;
+    gap: .5rem;
 }

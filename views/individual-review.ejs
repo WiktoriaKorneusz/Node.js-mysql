@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("includes/head.ejs", {title: "review"}) %>
+    </head>
+    <body class="blue-grey darken-4 blue-grey-text text-lighten-5">
+        <header class="">
+            <%- include("includes/header.ejs")  %>
+        </header>
+        <main>
+            <div class="review-parallax">
+                <div class="parallax-image " style="background-image: url('<%= review.img %>')">
+                </div>
+                
+            </div>
+            <section class="container content">
+                <div class="review">
+                    <div class="review-image">
+                        <img src="<%= review.img %>" />
+                    </div>
+                    <div class="review-content">
+                        <h1><%= review.title %></h1> 
+                                <h2><%= review.name %></h2>
+                                <h3>score: <%= review.score %></h3>
+                                <h4>Date: <time datetime="<%= review.date.toISOString() %>"
+                                    ><%= review.date.toLocaleDateString("en-US", {weekday: "long", year: "numeric", month: "long", day: "numeric"})
+                                    %></time
+                                ></h4>
+                                <p> <%= review.summary %></p>
+                                </p>
+                                <p><%= review.body %></p>
+                                <h4>~ <%= review.reviewer %></h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

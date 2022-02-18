@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("includes/head.ejs", {title: "add review"}) %>
+    </head>
+    <body class="blue-grey darken-4 blue-grey-text text-lighten-5">
+        <%- include("includes/header.ejs") %>
+        <main class="container s12">
+            <h1 class="center">Add Review</h1>
+            <form class="col s12" action="/add" method="post">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="title" type="text" name="title" required />
+                        <label for="title">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <select name="author" required>
+                            <% for (const author of authors) { %>
+                            <option value="<%= author.id %>">
+                                <%= author.name %>
+                            </option>
+                            <% }%>
+                        </select>
+                        <label>Author</label>
+                    </div>
+                    <div class="col s12 m6">
+                        <a
+                            href="/add-author"
+                            class="waves-effect waves-light btn cyan"
+                            style="margin-top: 1.5rem"
+                            ><i class="material-icons left">add</i>Add author</a
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea
+                            id="summary"
+                            class="materialize-textarea"
+                            maxlength="250"
+                            name="summary"
+                            required
+                        ></textarea>
+                        <label for="summary">Review summary</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea
+                            id="body"
+                            class="materialize-textarea"
+                            name="body"
+                            required
+                        ></textarea>
+                        <label for="body">Review content</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="name" type="text" name="name"required />
+                        <label for="name">Your name</label>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <label for="score">Score</label>
+                        <p class="range-field">
+                            <input
+                                type="range"
+                                id="score"
+                                name="score"
+                                min="0"
+                                max="5"
+                                required
+                            />
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <button
+                        type="submit"
+                        id="submit"
+                        class="waves-effect waves-light btn cyan right btn-large"
+                    >
+                        Add review
+                    </button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

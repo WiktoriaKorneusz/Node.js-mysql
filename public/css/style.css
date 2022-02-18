@@ -241,4 +241,9 @@ textarea {
   margin-top: 0;
 }
 
+.book-action {
+  display: flex;
+  gap: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
